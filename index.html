@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon linked online -->
+  <link rel="shortcut icon" id="fav"
+    href="data:image/png;base64,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"
+    type="image/x-icon" />
+  <!-- end of favicon -->
+  <!-- font awesome 5 from w3schools link -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- end of font awesome link -->
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- end of bootstrap  -->
+  <!-- link to my CSS  -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- end of CSS link  -->
+  <title>Philani</title>
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <img
+        src="data:image/png;base64,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"
+        alt="logo" style="width:40px;" id="logo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-comments"></i> News feed</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">
+            <i class="fas fa-info"></i>About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="	far fa-id-card"></i> Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-success" data-toggle="modal" data-target="#myModal2" href="#"><i
+              class="fas fa-user"></i> Add staff</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end of navigation bar -->
+
+  <!-- landing page -->
+  <div class="landing-page">
+    <h4 class="text-danger">
+      <a href="#everything">Go down<i class="far fa-arrow-alt-circle-down"></i></a>
+    </h4>
+  </div>
+  <!-- landing page -->
+
+  <!-- cards -->
+  <hr />
+  <div class="container-fluid bg-dark">
+    <h1 class="text-success text-center">
+      This is the collection of staff cards
+    </h1>
+  </div>
+  <hr />
+  <div class="container" id="con">
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info" id="everything">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal for delete button -->
+    </div>
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal for delete button -->
+    </div>
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal for delete button -->
+    </div>
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal for delete button -->
+    </div>
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of modal for delete button -->
+    </div>
+    <!-- profile picture -->
+    <div class="card">
+      <img class="rounded-circle" src="https://i.pravatar.cc/200" alt="" />
+      <!-- end of profile picture -->
+
+      <!-- staff card info! -->
+      <div class="card-info">
+        <hr />
+        <h3 class="text-center">Staff Profile</h3>
+        <hr />
+        <p>
+          <i class="fas fa-address-book"></i> Fullname: Lorem, ipsum dolor.
+        </p>
+        <p><i class="far fa-envelope"></i> Email:philani@gmail.com</p>
+        <p><i class="fas fa-mobile-alt"></i> Cellphone Number:074657874654</p>
+        <p><i class="fas fa-phone-alt"></i> Telephone Number:0123456567</p>
+
+        <!-- modal button for more infor -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">
+          <i class="fas fa-exclamation"></i> More info
+        </button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Personal Details</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <i class="fas fa-home"></i>home address:219 Voortrekker Rd,
+                  Parow
+                </p>
+                <p>
+                  <i class="fas fa-address-book"></i>Next of Kin: Philile
+                  Mhayise
+                </p>
+                <p>
+                  <i class="fas fa-share-alt"></i>Next of Kin Relationship:
+                  Sister
+                </p>
+                <p>
+                  <i class="fas fa-mobile-alt"></i>Cellphone Number:
+                  0798765433
+                </p>
+                <p>
+                  <i class="far fa-envelope"></i>Email
+                  address:phililemhayisee@gmail.com
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of modal more infor button  -->
+
+        <!-- modal for the delete button -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal1">
+          <i class="far fa-trash-alt"></i>Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confrirm</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the staff member?.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of modal for delete button -->
+    </div>
+    <!--all card info in this div-->
+    <!-- end of staff card info! -->
+    <a href="#" id="more">more staff...</a>
+  </div>
+
+  <!-- this modal -->
+  <!-- modal to add staff from the navbar link button -->
+  <div class="container">
+    <div class="modal fade" id="myModal2" role="dialog">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add staff member</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="fullname"><i class="fas fa-address-book"></i> Fullname</label>
+                <input type="text" class="form-control" placeholder="Philani Sithembiso" required />
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="far fa-envelope"></i>email</label>
+                <input type="email" class="form-control" placeholder="philanisithembiso@gmail.com" required />
+              </div>
+              <div class="form-group">
+                <label for="surname"><i class="fas fa-mobile-alt"></i>Cell Number</label>
+                <input type="number" class="form-control" placeholder="076 193 884" required />
+              </div>
+              <div class="form-group">
+                <label for="surname"><i class="fas fa-phone-alt"></i>Telephone Number</label>
+                <input type="number" class="form-control" placeholder="(012) 745 4654" required />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Cancel
+            </button>
+            <div class="form-group">
+              <input type="submit" value="Confirm" class="btn btn-success" data-dismiss="modal">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end  modal to add staff from the navbar link button -->
+  <!-- end of this modal -->
+
+  <!-- start of the footer -->
+  <footer class="container-fluid bg-dark text-success text-capitalize" id="footer">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Social medial</h3>
+        <p id="phila">
+          <i class="fab fa-facebook-square"></i> @facebook/philan isithembiso
+        </p>
+        <p><i class="fab fa-instagram"></i> @instagram/philan isithembiso</p>
+        <p>
+          <i class="fab fa-twitter-square"></i> @twitter/philan isithembiso
+        </p>
+        <p><i class="	far fa-envelope"></i> philanisithembiso@gmail.com</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>sponsors & partners</h3>
+        <p>
+          <img
+            src="data:image/png;base64,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"
+            style="width: 50px; height: 50px;" alt="" />life choices
+        </p>
+        <p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzsDqVyOCHYNkUAeR0Z7NnFYe1yszhSZZcUwG60xPXyGm1z75G&usqp=CAU"
+            style="width: 50px; height: 50px;" alt="" />KFC
+        </p>
+        <p>
+          <img
+            src="data:image/jpeg;base64,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"
+            style="width: 50px; height: 50px;" alt="" />Mr price
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h3>entertainment</h3>
+        <p>
+          <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEhMQEBAVFQ8REhcREhgVFhAQFRgXFhUXFhcWFhgYHTQgGBolHxYVIjEhJSk3Li4uGB8zODMuNygtLi4BCgoKDg0OGxAQGyslICY1MS0tKy8vKy0tKy0vLy8tLTUtKy8tLS0rLS0tLystLS0tLS0tKy0tLS0tLS0tKy8tLf/AABEIAI0BZAMBEQACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABwQGAwUIAgH/xABTEAABAwIBBQgKDgcIAgMAAAABAAIDBBESBQYHITETQVFhcXOysyIjJDM0cnSBkcEUMjVCUlSCg5KToaKx0RYlQ2LCw9IVF0RTY2SjtITiVZTh/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAQFAgMGAQf/xAA/EQACAQEDBwgJAQgDAQAAAAAAAQIDBAUREiExM0FxsTRRYYGRocHRBhMUFTJSsuHwciJCQ1NigpKiIyTxFv/aAAwDAQACEQMRAD8AeKAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACA1mXMuQUrcUztZ9oxut7rcA9Z1LXUqxgsWTLHYa1qlk01vexfnaUeu0i1BPaYo2N/fxSO+wgD7VDla5PQjpKPo7RS/wCSTb6MEvE1s2fFedkzW+LHH/ECtbtNTnJcbjsUdMW97fhgR3Z2V521T/M2Ifg1Y+vqc5uV02Jfw12vzML846w7aqXzOLfwXnrqnOzYrusi0U49hgdlmqO2qn+um/qXnrJ877TYrHZl/Dh/jHyPJypUfGZvrZfzXmXLnfaZey0P5cf8V5Hg182/PL9ZIfWmVLnZ77PR+SPYjyauXflf9N/5rzKfOZeppr91diPBmd8J3pK8xZ7kR5kecZ4T6Shlgj4h6fQEPGe2x8a9wMHLoMzIT/mEen817gYOa+UkR08m9O4edw9aySfOaZVIbYLu8iQykn3ql/0pB617ky5zW6tHbTXYvIzso6verHj52cetZZM/m4mp1rNtpLsiZW0VfvVsn19SF7k1fm72YOtYttJf4xM8cGVBsq3HlleekF6lW5+81SqXa9NJf4rwMw/tkbJyflQHpBZf8/PwMH7pemHdLwPba3LjduJw8Wkd0daZVoX4jF0bnlzLrn4mM57ZQhIE8LbcD43xk8hvb7F57TVj8SMlclhrLGlJ9TT7vuWjN7PKCpIjcDFMdjXEFrjwMdvniNipNK0Rnm0Mprdc1azJzX7UedaVvX/qLKpBTggBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgIOW8pspoXzv1ho1Dfc46mtHKVhUmoRymSbJZZWmsqUdvctrEvlGuknkdNK673nzAbzWjeaOD1kqplJyeLPodChChTVOmsEvzF9LIyxNwIAQAgBACAEAIAQAgBACA+tch40ZmSr3E1uJJjmWSZplAlxVCyTNEqZNhqFmmR5UybDULNMjSpk2GoWaZHlTJsNQs0yPKmTYqhZJkaVMkOwPaWvaHNOohwDgeUFZZnmZqWVCWVF4Mo2debAiBnpwdyGt7dZLP3mnbh/Dk2Q61HJ/ajoOluy9HWfqqvxbHz7+njv02jMLOI1EZhldeeIbTtezYHHjGw8oO+pNmrZawelFLfV3KzzVSmv2Zdz5tz0rrWwtiklGVp+fmTQSDU2IJB7XUbRqPvEB6gz6yc9zWNqRie4Nb2uca3Gw1lthrO+gLGgBAV6rz2yfG98UlSBJG4seMEzrOBsRcNsgMbM/cmkgCpuSQANzqNp1D3iAsqAEAIAQAgBACAEAIAQAgBALbSflEuljpgexjbujvGdcD0NB+mq+1zxkonX+jtnUaUqz0vMty83wKSoh0ZmjyfUvAdFSTyMOxzGFzTYkGx4iCPMs40pyWKRDq26z0puE5JPmPX9l1nxCq+qcsvUz5jD3nZfnXaj4cm1nxCq+pevPUz5h7ysvzrtR8OT6v4hV/USfknqZ8zPfeNl+ePavM8+wav4hV/wD15vyT1U+ZnvvCzfPHtXmeX08zdctNPEDqBlifECeAFw1niWMoSjpRtpWmlVeEJJ7mnwPKxJAIAQAgBAeo4nuIbGxz3n2rWDE42F9Q39QJ8y9SbeCNdSpGnFzm8EjP/ZVb/wDH1X1f/wCrZ6mpzEP3pZfnXaYJInsOGSN0bxta8YXDguOTWtcouLwZMpVYVYKcHimfWvXhk4mZkqyxNTiSop1kmaZQJkNQskzRKmTYahZpkaVMmw1CzTI8qZNhqFmmRpUybDULJMjypktsoILXC7SLEHWCDtBWeOJocGnitIv2E0Fe1wPa2PB5Yn6jfhsCfO1QdVU/NB1LSt9iaelr/ZffuY4VanAiAz+odwr6hlrNe7dmcknZG3EHYh5kBX904DY7yA6QyBlAVFNBOP2sTXnicR2Q8xuPMgM+UKtsUUkz/aRRukdyNaXH8EBzZNUue5z3G73uL3crjc/aUBvswKHd6+Blrtjdu7+SPsh97APOgH6gBACAEAIAQAgBACAEAIAQCTzoqd0rKh/+q5nmj7WOiqis8ajZ9Fu6n6uyU49Cfbn8TWLWTRuaPfAIeWXr5FaWbVLr4nB35y6f9v0osa3lSCAEAICl6U/BofKB1UiiWz4FvOh9G+UT/T4xFoq87EEAIAQAgN3mR4fT+M/qpFus+sX5sK2+OQ1Or6kORWp8/FDn/wCHTckfVtVXadYzvLk5FDr4sry0FsAKHhkZIvcTBxJEcq9xNcoEqKdZJmiVMmw1CzTI8qZNhqFmmR5UybDULNMjSpk2KoWSZHlTK9nxGHCKTxoz0h/F6VotC0MtbnlkuUOvwfgMXNyoMlLTvO10LMXKGgH7QVPpPGCZydvpqnaakVsb4i8035O1U9WBsJp3+e72eYWk+kthEFTuiAdehjKe6Ub4Ceyp5SAP3JOzB+kZB5kBM0tZS3HJ72g2dUPbAOQnG/7rHDzoBE7ogGtoRyfqqKsjaRTsPJZ7/wAY/QgGmgBACAEAIAQAgBACAEAIAQCDnmxuc/4bnP8ApEn1qkbxeJ9PhDIio8yw7DwhmWbIeektNCyBkTHNYXEElwPZPc87ONxUinaZQjkpFNbLlpWms6spNN4c2xJeBsDpImA8Gj+k8epZ+2S5iL/83Sf8R9iGNA/E1rvhNB9Iup6eKOSnHJk0Qsv5QNPTyTtaHGMAgE2Bu4Db51jUnkRciRYrOrRXjSbwxKMdJE3xeP6Tz6lC9slzHS//ADdL532I1OcedclXG2J8bGhkgkBaXE3DXNtr8YrXVruosGidYLqp2Oo5xk3isM+9PwK+tBaggBACAEBu8yPD6fxn9VIt1n1i/NhW3xyGp1fUhyK1Pn4oc/8Aw6bkj6tqq7TrGd5cnIodfFleWgtgQAgPoch40ZWSr3E1uJJjmWSZqlAlxVCyTNEqZNhqFmmRpUybDULNMjypkXON2KDxXtP4j1rGrnibrAsmtvTLlo+lxUMV9rTI30SOt9hCl2Z/8aOfvyOTbZ9OD7ke8/cleyaCohAu/c90j4ccfZtA5S23nW8qTmoPQDB0K5T3OudAT2NTCQON8fZt+7uqA2GnXKV5qamB73G6Z445DhZ5wGP+kgFeXoDpPR/kv2Pk+miIs8x7rJw4pOzIPJit5kBYHuABJIAAuSdQAG+UBRct6VcnwuLIi+ocDYmINwD5biA7lbdAaqDTNTk9so5mt4WujefQSPxQF3zezopK1pNNMHOAu5huyRvKw67cezjQG5QGvy9leOkgfUzYtyjw4sIxO7J7WCw5XBAVH+9zJvBP9WP6kBZs185IK6J01PjwMkMRxtDTiDWu2X2WcEB6zlzghooRPPj3MvEfYAON3AkaidmooCrHS7k74FR9Wz+tAWzN3LcVZA2phDhG8uAxgNd2Di03AJ3wUBMrpMMcjvgsc70NJXkngmbKMcqpGPO0IVg1DkVIfTnpPS9AIDy/YeReBaR90Xe2eI38AruOhHzGrrJb2ajPjwGfxW9Nq1WjVsnXPy2n18GJ1VR9APrGEkNaLucQAOEnUAizmMpKKbew2X6L5T+IP+tp/wCtb/ZqnMVfvqyfN3PyIlbk6ohIbUwmJzhdoLmPuBv9iStc6coZmTLLa6Vpi5U3jhvMUED3uDI24pHGzGggXO8LnUFjFNvBG6rUjTg5y0I2H6L5T+IP+tp/61u9mqcxW++rJ8/c/IhVdFNC7BURGOS2LCSx2o7DdpI3itU4ODwZPs9op2iGXTeK0G1zI8Pp/Gf1Ui2WfWL82ES+OQ1Or6kORWp8/E/pDeG10xOy0fH+zbqA3yqu061nd3LJKwwb6eLI9DmjlKZuNtO2Np1jd37m4/IAJb517GzTZjWvyzU3gnjuzkTKuRaulI9lQYWONmyMcJIyd4EjW0neuNawqUZQ0kiyXnQtLyYPPzbSGtRYggPjblwjjY58rvasY0vefMN7jXsYuTwRqq1oUo5U3gjf0uZmVHjFuEUfFJKMX3AQFIVlmU1S/bKngsXuXngYq7IOUKcYpqUujG10LhMBxlo7IDjsvJUJx2GyjetlrPBSwfTm+3eRaWrDgHNILTsIWpMnOGJPhqFmmR5Uz1lCTFE8cQPoIKSeMTyhHJqplv0ZTXpHg+8nc0edjHfxKXZH+x1lD6QwwtSa2xXFrwLgpRQHMmemSfYtdUU4FmNkLo9Vhub+zYBxAOw/JKAi5vZQNPVU9R/lTMe7xb2ePO0uHnQE/P7KnsnKFTKDdgk3Jm+MMYDARxEtLvlICJmrkz2TWU9Na7ZZWh4/cb2cn3GuQHUKASWl7O58szsnwutTwm01jbdJNpaeFrdQt8K99gQC2QHxrgdhBQEiiq5IZGzQvLJYziY5uog+sbxB1EaigOkMx84hXUjKiwEgJjmaNjZG2vbiIIcOJwQEDSx7lVXzX/YiQHPCAdugrwKfyt3UwoCRpt9z2+Ux9GRAIpAdAaHvcuHnJuuegLJnG+1JUngp5eg5a6vwPcS7AsbVTX9UeKEiqg+jggBAfH7DyLwLSPqi73H4jfwCu46EfMa2slvZp8+fAZ+RvWNWq0atk+5+W0+vgxPKqO/JGTe/Q87H0wsofEjTaNVPc+A91cnzMW2lPv0HNO6Sr7Z8SOv9G9VPeuBXs1PDKbnQtFHWItby5JU3DqVufOxU6SfDfmWfi9Vlq1h29wcj634EHMjw+n8Z/VSLGz6xfmwk3xyGp1fUhyK1Pn5pWZtw+zH10nZykNEQIGGPC0NJaN9xt7beGob99aprLytpMlbajs6oLNFY9eLN0thDI9fRsmjfDK3FHI0tcOI8HAd8HeK8aTWDM6dSVOanF4NCNq6Z0Uj4n+2je6MnZfCSL8htfzqmlHJbR9KoVVVpRqLak+0+UtM+V7IoheSRwYwHZc754gLk8QK9jFyaSPK9aNGnKpLQhx5tZuw0ceCMXkdYyyEDHI7hJ3hwN2BWtOmoLBHz612ypap5U3uWxG4WwiAgKFn7mywNdXU7Q1zeyqGjU17d+S285u0nfF98BRLRSTWUjoLmvCUZqhUeKeZdD8mUiOVQcTqnEzPmu1w4ivccxrUMJJlizJrMELxwzE/cYPUpFnlhFlVe9HLrRfR4sZisDjhQadck2dT1rR7YGmkPGLvj/m/YgFSgPiAZmgzJeOpnqiOxhjETODFIbkjjDWW+WgHRI6wJ4AT6EBybJO6QulebvkcZHnhc84nH0koC36KMjRVNeGzsD44YnT4Tra5zXMa0OG+LvvbiCAb+febsNTRTNMbd1jidJC4ABzXsaXCxGsA2sRwFAc3goBr6Bqp2Orhv2GGKUDgN3tcfOMPoQFx0se5VV81/2IkBzwgHZoJ8DqPKz1MKAkabvc9nlUfQkQCLQHQGh73Lh5ybrnoDf52HuKp5h49LSFqrauW4nXYv+3S/UuIllUn0QEAID4/YeReBaR80Pe4/Eb0QruOhHzGtrJb2ajPvwGfkZ1jFptGrZPubltPr4MTyqzvyRk3v0POx9MLKHxI02jVT3PgPdXJ8zFtpT79BzTukFX2z4kdd6N6qe9cCvZqeGU3OhaKOsRbXlySpuHUrc+dip0k+G/Ms/F6rLVrDt7g5H1vwIOZHh9P4z+qkWNn1i/NhJvjkNTq+pDkVqfPxe6Q8u1Ecwp4pDHHuTZCWXa8kucNbtoHYjZbf2qDaqslLJTOquKwUKlF1qkcXi1nzrQtnXtMmjbLE0j5YJZHPaGCRpeS9w7KxFzrtrHoXtlqSbcWzG/7HSpwjVhFJ44PDMn1F+U05cTOeY7uqPHHQaVU19Yz6DdPIqe7xZtdGVKHVTpD+yiJb4ziG39GIedbbIsZtkH0iqONmjFbXwX/g0VYnGCXzoytLPUSlz3YGyOZG25wtDSWiw2XNrk8aqa1Ryk8T6Fd1kp0KEclLFpNva285bdGWVJH7rTyOLmsDXx4iSQCSC253tlhva1Jsk28Yso/SGy04ZNWCwbxT6ebrLzJGHAtcLtcCCDvg6iFNOaTaeKENPGWPdHf2jnM+iSPUqVrB4H02EvWQUudJ9p9EmpMRkm1yJUYWOH75P3WrZTeCIVsp5U0+jzHKrY+fFfz8yR7KoKiEC78G6R+PH2bR5yLchKA5pB30B9QHQWiTJe4ZOicRZ9S41DuR1gz7jWHzoC2V5tFIeCN3RKA5Oj2DkCAZOgwd2zH/AGpHplj/ACQDmyiO1S82/olAcox7ByBAM7QT4TU8w3poC96WPcqq+a/7ESA54QDr0E+B1HlZ6mJASNN/uezypnQkQCMQHQGh73Lh5ybrnoDe53+BVPNOWqvq2T7r5ZT3oS91Un0ILoAugPjzqPIvD1aR9UPeo/Eb0QrqOhHzGtrJb2afPzwCfkZ1jFqtOrZYXNy2n18GJ66qzvSTk09uh52PphZQ+JGq0aqe58B7q5PmYttKnfoObd0gq+2fEjrvRvVVN64FezU8MpudC0UdYi2vLklTcOpW587FTpK8N+ZZ+L1W2rWHb3ByPrfgQcyPD6fxn9VIsLPrF+bCTfHIqnV9SHIrU+fir0meGDydnTkVba9Z1Hbej/JH+p8EZdF57qk8nd1ka9snxvcYekXJo/qXBjPVicYJrPXw6o8dvVsVVaNYz6BdHIqe58Wb3RX32fm2dIrdY/iZW+kmqp73wGQp5yJz7VVjcb7h98br9hJwniVM4vE+lU61PIWdaEXLRROHVEwF+877XN9+OEKVZE1JlF6Q1Iyowwe3wGgp5yQi8si1RUDgqJR6JHKmqfG97PpVkeNnpv8ApjwREWJvJ+T/AGp8b1BZx0Eav8Q8FcHzcEBy5nNRCGsqYQLNjqJGtH7uMlv2EICBBFjc1l7Y3Bt+DEQL/agOrqeBrGNjYLMY0MaOANFgPQEBiyn3mXmn9EoDlGPYOQIBlaC/DJ/Jv5jEA5co96k5t3RKA5Qj2DkCAZugnwqp5hvTQF80se5VV81/2IkBzwgHXoJ8DqPKz1MSAkacPAI/KmdXKgEYgOgND3uXDzk3XPQG9zv8CqeZd+C1VtWyddnK6e9CTxKpPoQYkAYkB8c7UeRD1aR/UHeo+bb0QrmOhHzKtrJb2aXP89wT/I61i1WjVssLm5bDr4MTmJVZ3hJya7t0PPR9MLKHxI1V9VPc+A+1cnzQWmlc9ug5t3SCgWz4kdb6OaqpvXArmaZ7tpudao9HWItby5JU3DuVufPRTaTD3b8yz8XqttWsO2uDknW/Ag5jHu+m8Z/UyLCz6xfmwk3vyKp1fUhzq1OAFRpOPdo8nZ05FW2vWdR2vo/yR/qfBGTRa7ut/k7usiXtk+N7jH0h5LH9S4MaasTjBL57nu+p8dvVMVVaNYzv7o5FT3P6mb/RQe21HNs6Tlusellb6SaunvfgMlTzkgQAgBAInLp7qqfKputeqep8ct74n0ixv/rUv0x+lELEsCQbfI8d2E/vn8AtsFmINqnhNbh2K2PnoIDmfPt98o1h/wBw8fROH1IDU0HfYudZ0ggOrkBFyp3mXmn9EoDlJmwciAZOgvwyfyY9YxAOXKZ7TLzb+iUByjHsHIEAzdBPhVTzDemgL5pY9yqr5r/sRIDnhAOrQR4JU+VnqYkBI04+AR+Vs6uVAI1AdAaHvcuHnJuuegN/nYL0VV5PJ9jCtdbVy3Ey7nha6X6lxEbiVSfQgxIAxIDy92o8i8PVpOgsn96j5tvRCuo6EfNK2slvZpdIJ/V8/wA31rFptGrZPublsOvgxM4lWHdkjJju3Q89H02r2PxI1V9VPc+B0Ark+bCy0tHt1Pzb+k1QLZ8SOs9HNVU3rgytZonu2m55vrWijrEWt5ckqbh5K2Pnwo9J57u+Yj/F6rbVrDtbh5J1vwIGYrv1hTeM/qZFhQ1i/NhJvbkVTcvqQ61anAil0onu0eTx9OVVtq1nUdpcHJH+p8Ee9FZ7sf5M/rIl7ZPj6vIx9IOSr9S4SGurE40SmfTv1hU+OzqY1VV9Y/zYd9dPIqe5/Uzf6JT22o5tnSct1j0srfSPV0974IZinnJiaqc9coB7wKkgB7gO10+wE294qt2ipjp4HdQuixOKbp7Ftl5mL9NcofGj9XT/ANCe0VOfgZ+6LF/L75eYfpnlD4076EH9C89oqc/Ae6bF/LXbLzNLPO57nPebve4vcdQu5xuTq1bStTeLxZYQjGEVGOhZkY7rwyLXmlDiief9Uj7jFJorFFLeVTJqrd4sbqsjigQHMWeR7vrfK5uscgNdQd9i51nSCA6uQEfKLbxSDhjcPulAcoR7ByBAMfQYe7phw0jvsli/NAOPLTrU854IZD6GFAcqs2DkQDP0EDuiqPBCwel5/JAXrSx7lVXzXXxIDnhAOnQQe5akf7q//FH+SAkacvAIvK2dVMgEcgOgND3uXDzk3XPQFny9HipqhvwoJG+ljgsKixi0SLJLJrwlzNcTn8OVQfRQxID7iQ8PL3ajyIerSdD5O71HzbeiFcx0I+bVtZLezSaRD+r6j5vrmLVaNWyfc/LYdfBiVxKrO6JOTXduh56PptWUfiRqr6qe58DoRXB83FhpePbabm5Ok1QLZpR1fo7q6m9eJWczz3dS8831rRR1iLW8uSVNw9VbHz8T+lE93fMR9J6rbVrDtLh5J/c/AgZhn9Y0vjv6mRYUNYvzYSb25FU3L6kO9WpwQodKh7uHk0fTlVdatZ1HZ3ByT+58InvRR4a/yV/WRJZPj6vIx9IH/wBVfqXCQ21YnHCPz7d+sKrx2dTGqqvrH+bDvbq5FT3P6mWDRE7t1RzTOkVusnxMrfSLVU974DQU85Q53qj2bxwPcPvFUz0n0qm/2FuRYcxMgwVk0kdQHFjI8YwuczXiA2jiut9npqcmmVd8WupZ6UZU3nb8C7f3aZO+BL9dL+al+zU+Y533za/mXYhW5VhbHPPEwWZFNJEy5LjhY9zRcnbqAVdNYSaOzs83OjCUtLSfakyLiWJuGPoypcdNKbbKlw/4oj61NsscYvecxflTJrxX9PjIYymnMggOYc8PD63yubrXIDX5P77FzrOmEB1cgPjm3BB2HUgOUKyjdDI+B/t4Xuidva2OLSfsQG/0e5xNoaxs8gJhex0Mthcta4tOIDfsWt1cF99AM3PbSLQ+xJoqabdZ54nRMDGvs3G0tL3OIsLA7NpNtW0gBGoBu6BqFwFXUEdg4xwt5WBz39NiAtmlYXyVVckR9E8ZQHO6AZuiHOikpIqmOqmEWJ7ZWYg44hhwkCw2jCNXGgNPpHz5Ne4QwtLaOJ2NuIWfI+xbjd8EWJAbx3OuwAFKQHQGh73Lh5ybrnoC5TsxNc34TSPSLLxmUXg0zm6J2ocgVMj6VLSz1iQ8DEgPL3ajyIerSdF5N7zFzbOiFcx0I+b1tZLezR6Rz+rqj5vro1qtGrZPuflkOvgxJYlVncGegfaWI8ErD6HhZR0o11c9OS6HwOi1cHzgW2l6ilc6mljie9jRIxxY0vsSWFtwNeuztfEodqg3g0dHcNpp01OE3hjg+zEiaPczpjKysqWuiZEcUMZ7GR7vhPG1rRvDaTxbfKFBp5UjZe16wlB0aWfHS9n5+bmoppzAnNKh7v8A/Hj6UirrVrDs7i5J/c/AgZgH9Y0vjP6mRYUNYvzYSL25FU6vqQ8laHCC30lZr1c07aqmjErdybE5gIbIMLnnEMWpw7LZtUS0UZSeUjorovKlQpulUzZ8cezyMmjDN2phklqKmIxXZuUbXEFxu4Oc4gHUOxaB50s9JxbbMb5vClXjGnTeODxYxFLOfETnw++UKo/6gHojYD+Cqq+sZ3t2ZrHT3eLNzonqw2sdGTbdYXBvG5rmut6MZ8y22V4TwIV/U3KzKS2Pj98BuqwOPEbnfkCop6mXtEj4ZJHSRPYx0jSHkuwnDscL2seC6ratGSk8Edtd940qlGKlJJpJPHozFx0UZFmjE1RPG6MShrImvGF5DSS5xadYBJAF+A8SkWam44tlRflsp1nGnB44YtveMBxAFzqA1lSigSxOda6pEksso2SSvkHI95cPxVPJ4ts+kUouFOMHsSXYsDDiWJmN/RTHahLvhzvd6MLP4VY2VfsHHX9LG1YcyXn4lyUkpQQHMWeQ7vrfKpuscgIGTBeaEcM0Y++EB1YgBAKrSvmJJK819GwueQPZEbRdzsIsJGAe2dYAFu/YW13uAn/VqPKN5ACA2mbmb9RWyiGnZc+/ebiOMfCe7e5Np3kB0dm3kSOjp46WLW2Ma3Ha5xN3PPGSTybN5AYc8cmuqaKpp2C8kkLgwbLvHZNF97WAgOYyCNRBBBsQQQQRqIIOw8SA+ICx5SzQnp6JlbUAxmWZsUcRFn4Sx7i9/wAE9gLN269dtiArqA6A0Pe5cPOTdc9AXVAc5ZWjwTzx/AnlZ9GRw9SqJLCTR9EoSyqUJc6T7kRcSxNoYkB8e7UeRD1POdHZKPaIeaZ0QreOhHzqtrJb3xNFpLP6uqOWLro1qtGrZOuflkOvgxH4lWnbBjI1jaNY5RsQZnmZ0bkyuZPFHPGbskaHDz7QeMG4I4lbxkpLFHzutSlSqOnLSiUsjUVCvz2j9mQUVMWyF8oZM/a1o13a0j2zuE7Bs27I8q6y1GJbUrrn7POvVzYLFLa+l9HHdpt6kFSJnSue7/8Ax4+lIq61aw7K4+Sdb8DX6PT+saXxn9TIsaGsX5sN968jqdX1IeyszhivDOyFtbJQS9reMG5OJ7F5cxrsJ+C651cPLqWr1yy8hlh7vqOzK0QzrPitqwfeuBYVtK8iZUyjHTxPnmdhjjFzx8AHCSdQHCVjKSisWbaFGdaoqcFnZz1W1jpZJJn+3le6R2/YucTYcQvbzKpbxeLPoNOCpwUI6Ekuw+UdW+KRksZtJG4PaeMcPCN4jgJRNp4o9qQjUg4S0PMx55qZ0Q1sYLSGztHbIyeyaeEfCbwH02OpWdKqprpOGt1gqWWeDzx2Pn8n0G+W0gggF7pGzxY2N9HTPDpXgsmc03DGn2zLj352cQvv2US0VklkxOgui7ZSmq9VYJZ0ud8+7iKvEoJ1WIYkA8tHMGDJ1OPhB0n05HOH2EKzs6wpo4e955dsn0YLsSRZFuK0EBo6zM7J0r3SSUULpHuLnuLRck7STvlAYYsxcmNc2RtFGHtcHtPZaiDcG17bQgLEgBACA0OXMzaCrJdUUzDIdr24opDbZdzCC7zoDUwaLclNNzA91tdnSzkegOF/OgLZQ0MULBFBEyONuxrGtY30BASEAICs5czCydVPM0tPaV3tnRufEXHhcGmzjxkXQGTIWY+T6Rwkhpxuo1h7y6V4PC0vJwnxbIDa5WyTBUs3KpibJGHBwa4XAcAQCOA6z6UBpv7v8l/Eo/v/AJoDeZMydDTxiGnjbHE25DWiwBcSSfOSSgJSARGkejMWUJ/gy4Zm8jmgH7zXqtrxwqM7e6avrLJHoxXZ9sCtYlpLEMSALoDcw52V7WhjayUNaA0C7TYDUBrC2KrNbSHKwWWTxdNY9Zirs5KyZhimqZHxutiacNjYgi9hwgFeOpOSwbM6djs9KWVCCT585q7rAkn26A2uRc5auluKeYtYTcsIa9hPDhcNR4xZZwqShoZFtFioWjPUji+fQ/zeZ8q54V1Q0slqXbmdRawNiB4jhFyOIleyrTlpZroXdZqLxjDPzvPxNPS1L43tkjcWvYbsItcEb4WtPB4omTjGcXGSxT0m4/TLKPx2T/j/AKVs9dU5yJ7usn8td/mazKGUZZ37pPIZJLBuJ1r2F7DUOMrCUnJ4sk0qVOlHJprBHijrJIntlieWSMuWuFri4LTt4iR50TaeKPakI1IuE1insNt+mWUfjsn/AB/0rP11TnIvu6yfy13+Zqq+ukmeZZnl8jrBznWubCw2DgAWEm5PFkqlThSjkwWCNzkzPfKEDQxlQXMAsBIGy25HHsvtWyNaccyZCrXZZarypQwfRm+3cQcs5wVVUR7JmLw03a2zWMB4Q1oAvxnWsZ1JT+Jm+z2SjZ9VHDj2s1t1gSQugPUUzmuDmOLXtN2uaS1wPCCNYRZjxpSWDWKLHSZ/ZSYLeycYGzdGRvPptc+crcq9RbSundNkm8cjDc2Rcp54V84LZKp+A7WswxA8RwAEjiJWMqs5aWbaN3WWk8YwWPO8/E0YK1k3E+4kAC51NF3HUBwk6gEGKWdnSGSKPcYIYR+yiZH9FoHqVtFZMUj55XqetqynztvtJayNQIAQAgBACAEAIAQAgBACAEAIAQAgBACAXemHIpfDHWMF3QdhLb/LcdTvku+xxUW1QxWUthfXHaVCo6Mv3tG9ea4IUWJQTqAxIAxIAxIAxIAxIAxIAxID7iQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQBiQFs0Z5FNTWNeR2mmtM/gxfs28uIX5GFb7PDKnuKy9rV6mzuK0yzLdt7s3WPRWJxgIAQAgBACAEAIAQAgBACAEAIAQAgBACAEB4mia9rmPaHMcC1wOsEEWII3wjWJ7GTi8VpEdnxmPLRudLC0yUZNwRdzoh8GTfsN53p17a+rRcM60HX2C84WhKM3hPju8uwpuJaC1PuJDwMSAMSAMSAMSAMSAMSAMSAMSAMSAMSAMSAMSAMSHoYkAYkAYkAYkAYkAYkAYkBssg5EqKyTcqaPEffONwxg4Xu3uTad4LKEHN4Ij2i1U7PHKqPq2vcPzNbIEdFA2CPWfbSPtYvedriN4bwG8AFZU4KEcEcZbLVK01XOXUuZG3WZFBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACArWU8wsnTuL30wa87TGXw34yGmxPHZapUYPYT6V52mmsFLN05+Jp5tE9AfavqG8j2HpMKwdmh0kmN+WlaVF9XkyM/RDS+9qZxy7if4Vj7LHnZsV+1tsY9/mRpND0fva145Y2O/BwXnsq5zYr+ltgu0h1GiMtF/Z9/mLfzV47L0myN+p/w/8Ab7GqqtHZZ/i7/M2/mLB2fDab4Xspfud/2IE2Zxbfui9v9P8A91j6npNyvFP93v8AsayfIhb+1v8AJt/EsHTwJEbVlbO/7Gqe2xI4FgSk8UfEAIAQAgM0VPcXv9i9SMHPAnRZHLiBulr/ALt/4llkGmVpw2d/2J9NmoXft7fN3/jWSpY7TTK3qP7vf9ja0ujsv/xdvmb/AMxZqz47SNO9sn9zv+xs6bRMX/463zF/5qyVlx2mmV+ZP8P/AG+xMi0PN9/XOPiwtb+LysvZek1Sv57Kff8AZEhmiCn99VzHkbEPUvfZY85g7+q7ILvJEeiSi99PUn5UIHV3XvssOdmDv2vsjHv8zY0ejXJjCCYXSEf5kkjh5wCAfOFmrPBbDRO97VLNlYbki1UlJHE0RxRtZGNjWNDGjzBbUksyK6c5TeVJ4vpMy9MQQH//2Q=="
+            style="width: 50px; height: 50px;" alt="" />YouTube
+        </p>
+      </div>
+    </div>
+    <p class="text-center">Copyright &copy;2020</p>
+  </footer>
+  <!-- end of the footer -->
+  <!-- bootstrap javascript links -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- end of javascrpit bootstrap links -->
+
+  <!-- my script, I used it for the "more staff link" for just -->
+
+  <script src="main.js"></script>
+  <!--end of my script -->
+</body>
+
+</html>

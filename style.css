@@ -1,0 +1,44 @@
+#fav {
+    border-radius: 50%;
+}
+
+#logo {
+    border-radius: 50%;
+}
+
+.landing-page {
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/03/22/34/lion-3372720__480.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 90vh;
+}
+
+a #everything {
+    text-decoration: none;
+}
+
+.card {
+    width: 30%;
+    margin: 1%;
+    min-width: 200px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.rounded-circle {
+    border: 2px dotted black;
+}
+
+.card-info {
+    margin-left: 2%;
+}
+
+#con {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
